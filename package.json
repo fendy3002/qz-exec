@@ -2,8 +2,15 @@
   "name": "@fendy3002/qz-exec",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "prepare": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fendy3002/qz-exec.git"
