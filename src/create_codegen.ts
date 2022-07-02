@@ -48,9 +48,10 @@ export const createCodegen = (argv) => {
   console.log(
     [
       `To complete setup, run the following command: ` + '\n',
-      `  cd ${option.folder ?? 'codegen'}` + '\n',
-      `  npm install` + '\n',
-      `  npm myproject`,
+      ``,
+      `  cd ${option.folder ?? 'codegen'}`,
+      `  npm install`,
+      `  npm run myproject`,
     ].join('\n'),
   );
 };
