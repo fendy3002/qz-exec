@@ -1,5 +1,11 @@
 import * as commandLineArgs from 'command-line-args';
-import { copyFileSync, existsSync, lstatSync, readdirSync } from 'fs';
+import {
+  copyFileSync,
+  existsSync,
+  lstatSync,
+  mkdirSync,
+  readdirSync,
+} from 'fs';
 import * as path from 'path';
 
 const optionDefinitions = [
@@ -7,6 +13,9 @@ const optionDefinitions = [
 ];
 const copyFolderContentSync = (sourcedir: string, targetdir: string) => {
   const sourceContent = readdirSync(sourcedir);
+  if (!existsSync(targetdir)) {
+    mkdirSync(targetdir, { recursive: true });
+  }
   for (const each of sourceContent) {
     const eachPath = path.join(sourcedir, each);
     const targetEachPath = path.join(targetdir, each);
