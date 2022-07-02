@@ -20,7 +20,7 @@ const copyFolderContentSync = (sourcedir: string, targetdir: string) => {
     const eachPath = path.join(sourcedir, each);
     const targetEachPath = path.join(targetdir, each);
     if (lstatSync(eachPath).isDirectory()) {
-      return copyFolderContentSync(eachPath, targetEachPath);
+      copyFolderContentSync(eachPath, targetEachPath);
     } else {
       copyFileSync(eachPath, targetEachPath);
     }
