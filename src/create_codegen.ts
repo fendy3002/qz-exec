@@ -30,5 +30,8 @@ export const createCodegen = (argv) => {
       console.error('Destination folder is not empty, stopping...');
     }
   }
-  copyFolderContentSync(path.join(__dirname, 'createAppSource'), workdir);
+  copyFolderContentSync(
+    path.join(__dirname, '..', 'assets', 'create_codegen'),
+    workdir,
+  );
 };
