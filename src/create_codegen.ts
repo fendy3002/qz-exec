@@ -36,11 +36,21 @@ export const createCodegen = (argv) => {
   if (existsSync(workdir)) {
     const dirContent = readdirSync(workdir);
     if (dirContent && dirContent.length > 0) {
-      console.error('Destination folder is not empty, stopping...');
+      console.error('ERROR: Destination folder is not empty, stopping...');
     }
   }
   copyFolderContentSync(
     path.join(__dirname, '..', 'assets', 'create_codegen'),
     workdir,
+  );
+  console.log(`DONE: created codegen app at ${workdir}`);
+  console.log();
+  console.log(
+    [
+      `To complete setup, run the following command: ` + '\n',
+      `  cd ${option.folder ?? 'codegen'}` + '\n',
+      `  npm install` + '\n',
+      `  npm myproject`,
+    ].join('\n'),
   );
 };

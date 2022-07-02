@@ -8,5 +8,8 @@
     "myproject": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/exec -l . ./myproject"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fendy3002/qz-code-generator": "^0.0.3"
+  }
 }
