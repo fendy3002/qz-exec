@@ -4,8 +4,10 @@
   "description": "Codegen project",
   "main": "index.js",
   "scripts": {
-    "make:extension": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/createExtension",
-    "myproject": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/exec -l . ./myproject"
+    "make:extension": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/exec make:extension -l $(npm prefix)",
+    "generate": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/exec generate -l $(npm prefix)",
+    "generate:myproject": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/exec generate -l $(npm prefix) myproject",
+    "list": "ts-node ./node_modules/@fendy3002/qz-code-generator/dist/exec list -l $(npm prefix)"
   },
   "author": "",
   "license": "ISC",
