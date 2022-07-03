@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fendy3002/qz-code-generator": "^0.0.4",
+    "@fendy3002/qz-code-generator": "^0.0.5",
     "debug": "^4.3.4"
   }
 }

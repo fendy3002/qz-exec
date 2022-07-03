@@ -51,7 +51,7 @@ export const createCodegen = (argv) => {
       ``,
       `  cd ${option.folder ?? 'codegen'}`,
       `  npm install`,
-      `  npm run myproject`,
+      `  npm run generate`,
     ].join('\n'),
   );
 };
